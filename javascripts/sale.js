@@ -1,3 +1,5 @@
+import { subtotal, display, calcPostageFromPurchase } from "./util.js";
+
 const priceElement = document.getElementById("product");
 const numberElement = document.getElementById("number");
 const addButton = document.getElementById("add");

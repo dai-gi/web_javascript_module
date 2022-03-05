@@ -1,16 +1,16 @@
-function subtotal() {
-  return purchases.reduce((prev, purchase) => {
-    return prev + purchase.product.price * purchase.number;
+export function subtotal(items) {
+  return items.reduce((prev, item) => {
+    return prev + items.product.price * purchase.number;
   }, 0)
 }
 
-function display() {
-  return purchases.map(purchase => {
-    return `${purchase.product.price}円:${purchase.number}点`;
+export function display(items) {
+  return items.map(item => {
+    return `${item.product.price}円:${item.number}点`;
   }).join("\n")
 };
 
-function calcPostageFromPurchase(sum) {
+export function calcPostageFromPurchase(sum) {
   if (sum == 0 || sum >= 3000) {
     return 0;
   } else if (sum < 1000) {
